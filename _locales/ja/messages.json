@@ -16,11 +16,11 @@
         "description": ""
     },
     "install_disabled": {
-        "message": "Install in disabled state",
+        "message": "無効状態でインストール",
         "description": ""
     },
     "download_error_unknown": {
-        "message": "User script download encountered an unknown error.",
+        "message": "ユーザースクリプトのダウンロードで不明なエラーが発生しました。",
         "description": ""
     },
     "edit": {
@@ -28,7 +28,7 @@
         "description": ""
     },
     "ERROR_at_URL": {
-        "message": "$1 at $2",
+        "message": "$2 で $1",
         "description": "E.g. 404 - Not Found at http://.../404.js"
     },
     "runs_on": {
@@ -92,7 +92,7 @@
         "description": ""
     },
     "install_failed": {
-        "message": "User script failed to install",
+        "message": "ユーザースクリプトのインストールに失敗しました",
         "description": ""
     },
     "install": {
@@ -140,11 +140,11 @@
         "description": ""
     },
     "download_failed": {
-        "message": "User script download failed",
+        "message": "ユーザースクリプトのダウンロードに失敗しました",
         "description": ""
     },
     "extDesc": {
-        "message": "Firefox 用のユーザースクリプトマネージャー。",
+        "message": "Firefox 向けのユーザースクリプトマネージャー。",
         "description": ""
     },
     "extName": {
@@ -194,7 +194,7 @@
         "description": ""
     },
     "open_editor_after": {
-        "message": "Open editor after install completes",
+        "message": "インストール完了後にエディタを開く",
         "description": ""
     },
     "greasemonkey_wiki": {
