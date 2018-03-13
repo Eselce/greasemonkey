@@ -1,6 +1,15 @@
+
+class DownloadError extends Error {
+  constructor(failedDownloads) {
+    super('Download(s) failed; see `.failedDownloads`.');
+    this.name = this.constructor.name;
+    this.failedDownloads = failedDownloads;
+  }
+}
+
+
 // Private implementation.
 (function() {
-
 
 class Downloader {
   constructor() {
@@ -30,6 +39,7 @@ class Downloader {
   }
 
   get progress() {
+    if (!this.scriptDownload) return 0;
     let p = this.scriptDownload.progress +
         (this.iconDownload ? this.iconDownload.progress : 0)
         + Object.values(this.requireDownloads)
@@ -84,10 +94,11 @@ class Downloader {
   }
 
   async install(disabled=false, openEditor=false) {
-    return new Promise(async (resolve, reject) => {
-      let scriptDetails = await this.scriptDetails;
-      scriptDetails.enabled = !disabled;
-      let downloaderDetails = await this.details();
+    let scriptDetails = await this.scriptDetails;
+    let downloaderDetails = await this.details();
+    scriptDetails.enabled = !disabled;
+
+    return new Promise((resolve, reject) => {
       chrome.runtime.sendMessage({
         'name': 'UserScriptInstall',
         'userScript': scriptDetails,
@@ -170,11 +181,8 @@ class Downloader {
         failedDownloads.push(download);
       }
     }
-    console.info('near end of downloader.start(); failedDownloads =', failedDownloads);
     if (failedDownloads.length > 0) {
-      let e = new Error('Download(s) failed; see `.failedDownloads`.');
-      e.failedDownloads = failedDownloads;
-      throw e;
+      throw new DownloadError(failedDownloads);
     }
   }
 
@@ -184,7 +192,9 @@ class Downloader {
     ) {
       let responseSoFar = event.target.response;
       try {
-        let scriptDetail = parseUserScript(responseSoFar, this._scriptUrl);
+        let scriptDetail = parseUserScript(
+            responseSoFar, this._scriptUrl,
+            /*failWhenMissing=*/!download.pending);
         if (scriptDetail) {
           this._scriptDetailsResolve(scriptDetail);
           this._scriptDetailsResolved = true;
@@ -195,6 +205,8 @@ class Downloader {
         if (!download.pending) {
           this._scriptDetailsReject(e);
           return;
+        } else {
+          console.warn('downloader parse fail:', e);
         }
       }
     }
@@ -210,6 +222,7 @@ class Download {
   constructor(progressCb, url, binary=false) {
     this.error = null;
     this.mimeType = null;
+    this.pending = true;
     this.progress = 0;
     this.status = null;
     this.statusText = null;
@@ -246,7 +259,9 @@ class Download {
     }
 
     this.mimeType = xhr.getResponseHeader('Content-Type');
+    this.pending = false;
     this.progress = 1;
+    this._progressCb(this, event);
     this.status = xhr.status;
     this.statusText = xhr.statusText;
     resolve(xhr.response);
@@ -256,6 +271,7 @@ class Download {
     this.progress = event.lengthComputable
         ? event.loaded / event.total
         : 0;
+    this.pending = this.progress < 1.0;
     this._progressCb(this, event);
   }
 }

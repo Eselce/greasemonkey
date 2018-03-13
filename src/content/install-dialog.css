@@ -23,13 +23,12 @@ body {
 
 
 body.install #loading,
-body.install #result,
+body.install #error,
 body.loading #install,
-body.loading #result,
-body.result #install,
-body.result #loading
+body.loading #error,
+body.error #install,
+body.error #loading
 { display: none; }
-
 
 section, .spacer {
   display: flex;
@@ -38,6 +37,12 @@ section, .spacer {
 }
 
 /******************************** LOADING ************************************/
+
+body.loading #actions { display: none; }
+
+#loading .fa {
+  margin: auto;
+}
 
 /******************************** INSTALL ************************************/
 
@@ -91,10 +96,6 @@ progress {
 }
 
 #install #footer #options,
-#install #footer #actions
-{
-  margin-top: 1em;
-}
 
 #install #footer #options label {
   display: block;
@@ -105,20 +106,24 @@ progress {
   vertical-align: top;
 }
 
-#install #footer #actions {
-  display: flex;
-}
-#install #footer #actions button {
-  flex-grow: 3;
-  width: 0;
-}
+/********************************* ERROR *************************************/
 
-/******************************** RESULT ************************************/
-
-#result header {
+#error header {
   font-size: 20px;
 }
 
-#result li {
+#error li {
   padding-top: 1ex;
+}
+
+/******************************** ACTIONS ************************************/
+
+#actions {
+  display: flex;
+  margin-top: 1em;
+}
+
+#actions button {
+  flex-grow: 3;
+  width: 0;
 }

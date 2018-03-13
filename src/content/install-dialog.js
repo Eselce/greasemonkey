@@ -4,9 +4,8 @@ let gInstallCountdown = 9;
 let gProgressBar = document.querySelector('progress');
 let gRvDetails = {
   'iconUrl': defaultIconUrl,
-  'resultHeader': '',
-  'resultText': null,
-  'resultList': [],
+  'errorHeader': '',
+  'errorList': [],
 };
 let gUserScriptUrl = unescape(document.location.search.substr(1));
 
@@ -40,7 +39,7 @@ gDownloader.scriptDetails.then(scriptDetails => {
 
   document.body.className = 'install';
 }).catch(err => {
-  // TODO: Show error results HTML.
+  // TODO: Show error HTML.
   console.warn('installer could not get script details:', err);
 });
 
@@ -61,9 +60,9 @@ function onClickInstall(event) {
   let disabled = document.getElementById('install-disabled').checked;
   let openEditor = document.getElementById('open-editor-after').checked;
   gDownloader.install(disabled, openEditor).then(finish).catch(err => {
-    gRvDetails.resultHeader = _('install_failed');
-    gRvDetails.resultList = [err.message];
-    document.body.className = 'result';
+    gRvDetails.errorHeader = _('install_failed');
+    gRvDetails.errorList = [err.message];
+    document.body.className = 'error';
   });
 }
 
@@ -84,10 +83,14 @@ function maybeEnableInstall() {
   gBtnInstall.appendChild(installCounter);
   let installTimer = setInterval(function() {
     gInstallCountdown--;
-    if (gInstallCountdown) {
+    if (gRvDetails.errorList.length > 0) {
+      clearInterval(installTimer);
+      installCounter.textContent = '';
+      gBtnInstall.setAttribute('disabled', '');
+    } else if (gInstallCountdown) {
       installCounter.textContent = ' ' + gInstallCountdown;
     } else {
-      clearTimeout(installTimer);
+      clearInterval(installTimer);
       maybeEnableInstall();
       installCounter.parentNode.removeChild(installCounter);
     }
@@ -96,9 +99,20 @@ function maybeEnableInstall() {
 
 /*****************************************************************************/
 
-gDownloader.start().then(maybeEnableInstall).catch(e => {
-  gRvDetails.resultHeader = _('download_failed');
-  gRvDetails.resultList = e.failedDownloads.map(
-      d => _('ERROR_at_URL', d.error, d.url));
-  document.body.className = 'result';
+gDownloader.start().then(() => {
+  gProgressBar.style.display = 'none';
+  maybeEnableInstall();
+}).catch(e => {
+  gRvDetails.errorHeader = _('download_failed');
+  if (e instanceof DownloadError) {
+    gRvDetails.errorList = e.failedDownloads.map(
+        d => _('ERROR_at_URL', d.error, d.url));
+  } else if (e.message) {
+    gRvDetails.errorList = [e.message];
+  } else {
+    // Log the unknown error.
+    console.error('Unknown save error in install dialog', e);
+    gRvDetails.errorList = [_('download_error_unknown')];
+  }
+  document.body.className = 'error';
 });
