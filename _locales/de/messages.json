@@ -43,6 +43,10 @@
         "message": "Greasemonkey ist aktiviert",
         "description": ""
     },
+    "greasemonkey_user_script_editor": {
+        "message": "Greasemonkey Benutzerskript-Editor",
+        "description": ""
+    },
     "other_user_scripts": {
         "message": "Sonstige Benutzerskripte",
         "description": ""
@@ -69,6 +73,10 @@
     },
     "save_failed_NAME_already_in_NAMESPACE": {
         "message": "Fehler beim Speichern: Es gibt bereits ein Benutzerskript $1 im Namensbereich $2.",
+        "description": ""
+    },
+    "close": {
+        "message": "Schließen",
         "description": ""
     },
     "malicious_user_scripts": {
@@ -173,6 +181,10 @@
         "message": "GM.notification: Parameter \"text\" muss ein String sein.",
         "description": ""
     },
+    "saving": {
+        "message": "Speichern",
+        "description": ""
+    },
     "new_user_script": {
         "message": "Neues Benutzerskript...",
         "description": ""
@@ -183,10 +195,6 @@
     },
     "matches": {
         "message": "Ausgeführt auf (@match):",
-        "description": ""
-    },
-    "NAME_greasemonkey_user_script_editor": {
-        "message": "$1 - Greasemonkey Benutzerskript-Editor",
         "description": ""
     },
     "xhr_no_url": {

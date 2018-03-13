@@ -43,6 +43,10 @@
         "message": "Greasemonkey は有効",
         "description": ""
     },
+    "greasemonkey_user_script_editor": {
+        "message": "Greasemonkey ユーザースクリプトエディタ",
+        "description": ""
+    },
     "other_user_scripts": {
         "message": "その他のユーザースクリプト",
         "description": ""
@@ -69,6 +73,10 @@
     },
     "save_failed_NAME_already_in_NAMESPACE": {
         "message": "ユーザースクリプトの保存に失敗: 「@name $1」「@namespace $2」のどちらも一致するスクリプトが既に存在します。 ",
+        "description": ""
+    },
+    "close": {
+        "message": "Close",
         "description": ""
     },
     "malicious_user_scripts": {
@@ -173,6 +181,10 @@
         "message": "GM.notification: 「text」は文字列でなければなりません。",
         "description": ""
     },
+    "saving": {
+        "message": "Saving",
+        "description": ""
+    },
     "new_user_script": {
         "message": "ユーザースクリプトの新規作成...",
         "description": ""
@@ -183,10 +195,6 @@
     },
     "matches": {
         "message": "実行されるページ (@match):",
-        "description": ""
-    },
-    "NAME_greasemonkey_user_script_editor": {
-        "message": "$1 — Greasemonkey ユーザースクリプトエディタ",
         "description": ""
     },
     "xhr_no_url": {

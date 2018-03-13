@@ -2,9 +2,6 @@
   "NAME_greasemonkey_user_script": {
     "message": "$1 - Greasemonkey User Script"
   },
-  "NAME_greasemonkey_user_script_editor": {
-    "message": "$1 - Greasemonkey User Script Editor"
-  },
   "ERROR_at_URL": {
     "message": "$1 at $2",
     "description": "E.g. 404 - Not Found at http://.../404.js"
@@ -14,6 +11,9 @@
   },
   "cancel": {
     "message": "Cancel"
+  },
+  "close": {
+    "message": "Close"
   },
   "disabled": {
     "message": "Disabled"
@@ -76,6 +76,9 @@
   "greasemonkey_is_disabled": {
     "message": "Greasemonkey is disabled"
   },
+  "greasemonkey_user_script_editor": {
+    "message": "Greasemonkey User Script Editor"
+  },
   "greasemonkey_wiki": {
     "message": "Greasemonkey Wiki"
   },
@@ -120,6 +123,9 @@
   },
   "save_failed_unknown": {
     "message": "User script save failed: unknown error."
+  },
+  "saving": {
+    "message": "Saving"
   },
   "script_save_error": {
     "message": "Script save error"

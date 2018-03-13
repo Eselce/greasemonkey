@@ -43,6 +43,10 @@
         "message": "Greasemonkey 已启用",
         "description": ""
     },
+    "greasemonkey_user_script_editor": {
+        "message": "Greasemonkey 用户脚本编辑器",
+        "description": ""
+    },
     "other_user_scripts": {
         "message": "其他用户脚本",
         "description": ""
@@ -69,6 +73,10 @@
     },
     "save_failed_NAME_already_in_NAMESPACE": {
         "message": "用户脚本保存失败：名为 $1 且命名空间为 $2 的脚本已存在。",
+        "description": ""
+    },
+    "close": {
+        "message": "Close",
         "description": ""
     },
     "malicious_user_scripts": {
@@ -173,6 +181,10 @@
         "message": "GM.notification：\"text\" 必须为一个字符串",
         "description": ""
     },
+    "saving": {
+        "message": "Saving",
+        "description": ""
+    },
     "new_user_script": {
         "message": "新建用户脚本...",
         "description": ""
@@ -183,10 +195,6 @@
     },
     "matches": {
         "message": "匹配：",
-        "description": ""
-    },
-    "NAME_greasemonkey_user_script_editor": {
-        "message": "$1 - Greasemonkey 用户脚本编辑器",
         "description": ""
     },
     "xhr_no_url": {
