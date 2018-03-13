@@ -76,7 +76,7 @@
         "description": ""
     },
     "close": {
-        "message": "Close",
+        "message": "閉じる",
         "description": ""
     },
     "malicious_user_scripts": {
@@ -182,7 +182,7 @@
         "description": ""
     },
     "saving": {
-        "message": "Saving",
+        "message": "保存中",
         "description": ""
     },
     "new_user_script": {
