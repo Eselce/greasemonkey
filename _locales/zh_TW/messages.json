@@ -76,7 +76,7 @@
         "description": ""
     },
     "close": {
-        "message": "Close",
+        "message": "關閉",
         "description": ""
     },
     "malicious_user_scripts": {
@@ -182,7 +182,7 @@
         "description": ""
     },
     "saving": {
-        "message": "Saving",
+        "message": "正在儲存",
         "description": ""
     },
     "new_user_script": {
