@@ -208,5 +208,17 @@
     "greasemonkey_wiki": {
         "message": "Greasemonkey Wiki",
         "description": ""
+    },
+    "description": {
+        "message": "Beschreibung:",
+        "description": ""
+    },
+    "homepage": {
+        "message": "Homepage",
+        "description": ""
+    },
+    "version": {
+        "message": "Version:",
+        "description": ""
     }
 }
