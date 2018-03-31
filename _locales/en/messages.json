@@ -48,6 +48,9 @@
   "cancel": {
     "message": "Cancel"
   },
+  "close": {
+    "message": "Close"
+  },
   "confirm_db_merge_FILENAME": {
     "message": "Merge database using selected file?\n$1"
   },
@@ -124,6 +127,9 @@
   "greasemonkey_is_disabled": {
     "message": "Greasemonkey is disabled"
   },
+  "greasemonkey_user_script_editor": {
+    "message": "Greasemonkey User Script Editor"
+  },
   "greasemonkey_wiki": {
     "message": "Greasemonkey Wiki"
   },
@@ -174,6 +180,9 @@
   },
   "save_failed_unknown": {
     "message": "User script save failed: unknown error."
+  },
+  "saving": {
+    "message": "Saving"
   },
   "script_save_error": {
     "message": "Script save error"

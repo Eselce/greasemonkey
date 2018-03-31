@@ -1,0 +1,212 @@
+{
+    "gm_script_id": {
+        "message": "[Greasemonkey-script $1]",
+        "description": ""
+    },
+    "save_failed_unknown": {
+        "message": "Opslaan van gebruikersscript mislukt: onbekende fout.",
+        "description": ""
+    },
+    "xhr_no_details": {
+        "message": "GM.xmlHttpRequest: geen details ontvangen.",
+        "description": ""
+    },
+    "SCRIPT_does_not_grant_METHOD": {
+        "message": "$1 vereist @grant voor methode $2",
+        "description": ""
+    },
+    "install_disabled": {
+        "message": "Installeren in uitgeschakelde status",
+        "description": ""
+    },
+    "download_error_unknown": {
+        "message": "Onbekende fout bij downloaden van gebruikersscript.",
+        "description": ""
+    },
+    "edit": {
+        "message": "Bewerken",
+        "description": ""
+    },
+    "ERROR_at_URL": {
+        "message": "$1 op $2",
+        "description": "E.g. 404 - Not Found at http://.../404.js"
+    },
+    "runs_on": {
+        "message": "Werkt op:",
+        "description": ""
+    },
+    "uninstall": {
+        "message": "De-installeren",
+        "description": ""
+    },
+    "greasemonkey_is_active": {
+        "message": "Greasemonkey is actief",
+        "description": ""
+    },
+    "greasemonkey_user_script_editor": {
+        "message": "Greasemonkey-gebruikersscripteditor",
+        "description": ""
+    },
+    "other_user_scripts": {
+        "message": "Andere gebruikersscripts",
+        "description": ""
+    },
+    "xhr_bad_url_scheme": {
+        "message": "GM.xmlHttpRequest: doorgegeven URL heeft onjuist protocol: $1",
+        "description": ""
+    },
+    "gm_opentab_bad_URL": {
+        "message": "GM.openInTab: de URL werd niet begrepen: $1",
+        "description": ""
+    },
+    "this_is_a_greasemonkey_user_script": {
+        "message": "Dit is een Greasemonkey-gebruikersscript. Klik op Installeren om het te gebruiken.",
+        "description": ""
+    },
+    "does_not_run_on": {
+        "message": "Werkt niet op:",
+        "description": ""
+    },
+    "enabled": {
+        "message": "Ingeschakeld",
+        "description": ""
+    },
+    "save_failed_NAME_already_in_NAMESPACE": {
+        "message": "Opslaan van gebruikersscript mislukt: script met naam $1 bestaat al in namespace $2.",
+        "description": ""
+    },
+    "close": {
+        "message": "Sluiten",
+        "description": ""
+    },
+    "malicious_user_scripts": {
+        "message": "Kwaadwillende gebruikersscripts kunnen uw privacy schenden, uw gegevens stelen, en namens u handelen zonder uw medeweten.",
+        "description": ""
+    },
+    "NAME_greasemonkey_user_script": {
+        "message": "$1 - Greasemonkey-gebruikersscript",
+        "description": ""
+    },
+    "sources_you_trust": {
+        "message": "Installeer alleen scripts van bronnen die u vertrouwt.",
+        "description": ""
+    },
+    "undo_uninstall": {
+        "message": "Installatie ongedaan maken",
+        "description": ""
+    },
+    "get_user_scripts": {
+        "message": "Gebruikersscripts verkrijgen",
+        "description": ""
+    },
+    "install_failed": {
+        "message": "Installeren van gebruikersscript mislukt",
+        "description": ""
+    },
+    "install": {
+        "message": "Installeren",
+        "description": ""
+    },
+    "requires_special_apis": {
+        "message": "Vereist speciale API’s:",
+        "description": ""
+    },
+    "user_scripts_for_this_tab": {
+        "message": "Gebruikersscript voor dit tabblad",
+        "description": ""
+    },
+    "greasemonkey_home_page": {
+        "message": "Greasemonkey-homepage",
+        "description": ""
+    },
+    "xhr_bad_url": {
+        "message": "GM.xmlHttpRequest: de URL werd niet begrepen: $1\n$2",
+        "description": ""
+    },
+    "script_save_error": {
+        "message": "Fout bij opslaan van script",
+        "description": ""
+    },
+    "ignoring_MATCH_because_REASON": {
+        "message": "@match-patroon $1 wordt om de volgende reden genegeerd:\n$2",
+        "description": ""
+    },
+    "save": {
+        "message": "Opslaan",
+        "description": ""
+    },
+    "duplicate_resource_NAME": {
+        "message": "Dubbele bronnaam: $1",
+        "description": ""
+    },
+    "disabled": {
+        "message": "Uitgeschakeld",
+        "description": ""
+    },
+    "cancel": {
+        "message": "Annuleren",
+        "description": ""
+    },
+    "download_failed": {
+        "message": "Downloaden van gebruikersscript mislukt",
+        "description": ""
+    },
+    "extDesc": {
+        "message": "Een gebruikersscriptbeheerder voor Firefox.",
+        "description": ""
+    },
+    "extName": {
+        "message": "Greasemonkey",
+        "description": ""
+    },
+    "gm_script_id_ver": {
+        "message": "[Greasemonkey-script $id$; versie $version$]",
+        "description": "",
+        "placeholders": {
+            "id": {
+                "content": "$1",
+                "example": "User Script Name Here"
+            },
+            "version": {
+                "content": "$2",
+                "example": "1.0"
+            }
+        }
+    },
+    "unnamed_script_RAND": {
+        "message": "Naamloos script $1",
+        "description": ""
+    },
+    "gm_notif_text_must_be_string": {
+        "message": "GM.notification: ‘text’ moet een string zijn",
+        "description": ""
+    },
+    "saving": {
+        "message": "Opslaan",
+        "description": ""
+    },
+    "new_user_script": {
+        "message": "Nieuw gebruikersscript...",
+        "description": ""
+    },
+    "greasemonkey_is_disabled": {
+        "message": "Greasemonkey is uitgeschakeld",
+        "description": ""
+    },
+    "matches": {
+        "message": "Overeenkomsten:",
+        "description": ""
+    },
+    "xhr_no_url": {
+        "message": "GM.xmlHttpRequest: geen URL ontvangen.",
+        "description": ""
+    },
+    "open_editor_after": {
+        "message": "Editor openen na voltooien van installatie",
+        "description": ""
+    },
+    "greasemonkey_wiki": {
+        "message": "Greasemonkey-wiki",
+        "description": ""
+    }
+}
